@@ -5,14 +5,14 @@ import net.thucydides.core.annotations.Steps;
 import steps.PaginaInicialSteps;
 import steps.PaginaPerfilSteps;
 import steps.RegistroFinalSteps;
-import steps.RegistroSteps;
+import steps.PaginaRegistroSteps;
 
 public class LoginHacebStepdefinitions {
 
     @Steps
     PaginaInicialSteps paginaInicialSteps;
     @Steps
-    RegistroSteps registroSteps;
+    PaginaRegistroSteps paginaRegistroSteps;
 
     @Steps
     RegistroFinalSteps registroFinalSteps;
@@ -27,7 +27,7 @@ public class LoginHacebStepdefinitions {
     }
     @Cuando("el usuario debe ingresar sus datos en el formulario de registro")
     public void elUsuarioDebeIngresarSusDatosEnElFormularioDeRegistro() {
-        registroSteps.registroFormulario();
+        paginaRegistroSteps.registroFormulario();
         registroFinalSteps.registroFinal();
         registroFinalSteps.pasoVentanas();
     }

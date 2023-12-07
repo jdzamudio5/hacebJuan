@@ -3,14 +3,14 @@ package steps;
 import net.serenitybdd.core.pages.WebElementFacade;
 import net.thucydides.core.annotations.Step;
 import org.fluentlenium.core.annotation.Page;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 
-import org.openqa.selenium.interactions.Actions;
+
 import pageObjectModel.PaginaInicialPage;
 
 import static utils.Esperas.espera1;
+import static utils.PasoVentanasWeb.pasoVentanasWeb;
 import static utils.PopUp.popUp;
+import static utils.Hover.*;
 
 public class PaginaInicialSteps {
 
@@ -34,8 +34,9 @@ public class PaginaInicialSteps {
 
 
         WebElementFacade mainMenu=paginaInicialPage.hrvPerfil;
-        Actions actions= new Actions(paginaInicialPage.getDriver());
-        actions.moveToElement(mainMenu).perform();
+        Interaction(paginaInicialPage.getDriver(),mainMenu);
+        /*Actions actions= new Actions(paginaInicialPage.getDriver());
+        actions.moveToElement(mainMenu).perform();*/ //se cambia por el interaction en la clase hover
         paginaInicialPage.lnkRegistro.click();
         paginaInicialPage.lnkIngreso.click();
 
@@ -44,11 +45,12 @@ public class PaginaInicialSteps {
     }
     @Step("Paso entre ventanas")
     public void pasoVentanas(){
-        for (String windowHandle : paginaInicialPage.getDriver().getWindowHandles()) {
+        pasoVentanasWeb(paginaInicialPage.getDriver());
+        /*for (String windowHandle : paginaInicialPage.getDriver().getWindowHandles()) {
             if(!paginaInicialPage.getDriver().getWindowHandle().contentEquals(windowHandle)) {
                 paginaInicialPage.getDriver().switchTo().window(windowHandle);
                 break;
             }
-        }
+        }*/
     }
 }

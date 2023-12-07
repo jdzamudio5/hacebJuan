@@ -5,6 +5,7 @@ import org.fluentlenium.core.annotation.Page;
 import pageObjectModel.RegistroFinalPage;
 import utils.Data;
 
+import static utils.PasoVentanasWeb.pasoVentanasWeb;
 import static utils.Selects.select;
 
 public class RegistroFinalSteps {
@@ -24,12 +25,14 @@ public class RegistroFinalSteps {
     }
     @Step("Paso entre ventanas")
     public void pasoVentanas(){
-        for (String windowHandle : registroFinalPage.getDriver().getWindowHandles()) {
+
+        pasoVentanasWeb(registroFinalPage.getDriver());
+        /*for (String windowHandle : registroFinalPage.getDriver().getWindowHandles()) {
             if(!registroFinalPage.getDriver().getWindowHandle().contentEquals(windowHandle)) {
                 registroFinalPage.getDriver().switchTo().window(windowHandle);
                 break;
             }
-        }
+        }*/
     }
 
 }

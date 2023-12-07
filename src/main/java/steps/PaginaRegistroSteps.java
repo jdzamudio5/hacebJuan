@@ -6,7 +6,7 @@ import org.openqa.selenium.JavascriptExecutor;
 import pageObjectModel.RegistroPage;
 import utils.Data;
 
-public class RegistroSteps {
+public class PaginaRegistroSteps {
     @Page
     RegistroPage registroPage;
 
