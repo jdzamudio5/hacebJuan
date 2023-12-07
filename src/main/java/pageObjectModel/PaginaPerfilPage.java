@@ -6,7 +6,7 @@ import net.serenitybdd.core.pages.PageObject;
 import net.serenitybdd.core.pages.WebElementFacade;
 
 public class PaginaPerfilPage extends PageObject {
-    @FindBy(how = How.XPATH, using = "//div[@class='vtex-account__user-name f4 c-on-base fw3 nowrap']")
+    @FindBy(how = How.XPATH, using = "//input[@value='ACTUALIZAR DATOS']")
     public WebElementFacade namePerfil;
 
 }

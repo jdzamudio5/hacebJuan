@@ -27,12 +27,7 @@ public class RegistroFinalSteps {
     public void pasoVentanas(){
 
         pasoVentanasWeb(registroFinalPage.getDriver());
-        /*for (String windowHandle : registroFinalPage.getDriver().getWindowHandles()) {
-            if(!registroFinalPage.getDriver().getWindowHandle().contentEquals(windowHandle)) {
-                registroFinalPage.getDriver().switchTo().window(windowHandle);
-                break;
-            }
-        }*/
+
     }
 
 }

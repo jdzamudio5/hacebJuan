@@ -25,5 +25,18 @@ public class Esperas {
         );
 
     }
+    public static void espera2(){
+
+
+
+        try {
+            Thread.sleep(3000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+
+
+    }
+
 
 }

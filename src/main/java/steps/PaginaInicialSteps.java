@@ -46,11 +46,6 @@ public class PaginaInicialSteps {
     @Step("Paso entre ventanas")
     public void pasoVentanas(){
         pasoVentanasWeb(paginaInicialPage.getDriver());
-        /*for (String windowHandle : paginaInicialPage.getDriver().getWindowHandles()) {
-            if(!paginaInicialPage.getDriver().getWindowHandle().contentEquals(windowHandle)) {
-                paginaInicialPage.getDriver().switchTo().window(windowHandle);
-                break;
-            }
-        }*/
+
     }
 }

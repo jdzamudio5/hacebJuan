@@ -32,7 +32,6 @@ public class LoginHacebStepdefinitions {
         registroFinalSteps.pasoVentanas();
     }
     @Entonces("el usuario podrá ver su perfil")
-    public void elUsuarioPodráVerSuPerfil() {
-        paginaPerfilSteps.paginaPerfil();
+    public void elUsuarioPodráVerSuPerfil() { paginaPerfilSteps.paginaPerfil();
     }
 }

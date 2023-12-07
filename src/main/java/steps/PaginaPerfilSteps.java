@@ -7,6 +7,7 @@ import pageObjectModel.PaginaInicialPage;
 import pageObjectModel.PaginaPerfilPage;
 
 import static utils.Esperas.espera1;
+import static utils.Esperas.espera2;
 
 public class PaginaPerfilSteps {
     @Page
